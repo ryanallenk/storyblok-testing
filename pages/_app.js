@@ -13,7 +13,10 @@ const components = {
 };
 
 storyblokInit({
-  accessToken: 'ouFcnr5cB87YWzQUDlSsTgtt',
+  accessToken: 'o0EpVB7ofny9E9jvK1hImAtt',
+  apiOptions: {
+    region: "us", // Pass this key/value if your space was created under US region
+  },
   use: [apiPlugin],
   components,
 });
