@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import { getStoryblokApi, StoryblokComponent } from '@storyblok/react';
+import { getStoryblokApi, StoryblokComponent, useStoryblokState } from '@storyblok/react';
 
-export default function Home(props) {
-  const story = props.story
+export default function Home({ story }) {
+  story = useStoryblokState(story);
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +14,6 @@ export default function Home(props) {
  
       <header>
         <h1>
-          Hello world
           { story ? story.name : 'My Site' }
         </h1>
       </header>
